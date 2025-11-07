@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="app-header">
+            <h1>🌤️ Weather Forecast</h1>
+            <p>Get real-time weather information for any city</p>
+        </header>
+
+        <main class="main-content">
+            <div class="container">
+                <form id="weather-form">
+                    <div class="input-group">
+                        <input type="text" id="city" placeholder="Enter city name" required>
+                        <button type="submit">Get Weather</button>
+                    </div>
+                </form>
+                
+                <button id="location-btn" type="button" class="location-btn">
+                    📍 Get My Location Weather
+                </button>
+
+                <!-- Search History -->
+                <div id="search-history" class="search-history" style="display: none;">
+                    <h3>Recent Searches</h3>
+                    <div id="history-list" class="history-list"></div>
+                </div>
+
+                <div id="loading" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    Loading weather data...
+                </div>
+                
+                <div id="error-message" class="error-message" style="display: none;"></div>
+                
+                <div id="weather-data" class="weather-data" style="display: none;"></div>
+                
+                <div id="forecast" class="forecast" style="display: none;"></div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-content">
+                <p>Powered by OpenWeatherMap</p>
+                <div class="theme-toggle">
+                    <button id="theme-btn">🌙 Dark Mode</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
